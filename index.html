@@ -23,7 +23,6 @@ Released   : 20140322
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="slick/slick.css">
 <link rel="stylesheet" href="slick/slick-theme.css">
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
@@ -53,7 +52,7 @@ Released   : 20140322
 	<div class="img-container">
 		<img src="./images/logo2.png" alt="logo">
 	</div>
-	<div class="nav-movile">
+	<div class="nav-movile" style="display: none;">
 	<div class="show-button" id="show-button">
 		<span class="icon icon-reorder"></span>
 	</div>
@@ -73,7 +72,7 @@ Released   : 20140322
 	</div>
 	</div>
 	</div>
-	<div class="pages">
+	<div class="pages" id="nav-desktop" style="display: none;">
 		<a href="">Inicio</a>
 		<a href="">Propiedades</a>
 		<a href="">Alquileres</a>
@@ -249,7 +248,7 @@ Released   : 20140322
     
 <!--supercontainer end  -->
 
-<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-3.2.1.js"></script>
 <script src="js/smooth-scroll.js"></script>
 <script src="simple-slider/src/jquery.simpleslider.js"></script>
 <script src="simple-slider/src/transit.js"></script>
@@ -347,12 +346,8 @@ var options = {
 	$( window ).resize(function() {
 		var ancho = $( window ).width();
 		if (ancho > 989) {
-			$(".nav-movile").hide();
-			$(".pages").show();
 			$(".slick").slick("slickSetOption","slidesToShow",3);
 		}else{
-			$(".nav-movile").show();
-			$(".pages").hide();
 			$(".slick").slick("slickSetOption","slidesToShow",1);
 		}
 	});
