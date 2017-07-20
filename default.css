@@ -1023,7 +1023,7 @@
 		transition: all 0.5s ease;
 	}
 	
-	#show-button{
+	.show-button{
 		position: absolute;
 		top:100px;
 		left: 80%;
@@ -1032,9 +1032,35 @@
 		transform: translateY(-50px);
 		transition: all 0.2s ease;
 	}
-	#show-button:hover{
+	.show-button:hover{
 		font-size: 40px;
 		transition: all 0.2s ease;
+	}
+	.show-button-2{
+		position:fixed;
+		background-color: black;
+		color:white;
+		border-radius: 100%;
+		top: 85%;
+		left: 110%;
+		z-index: 9;
+		height: 60px;
+		width: 60px;
+		font-size: 30px;
+		padding: auto;
+		text-align: center;
+		display: table;
+		transition: all 0.2s ease;
+	}
+	.show-button-2.visible{
+		left: 85%;
+		transition: all 0.2s ease;
+	}
+	.show-button-2 span{
+		margin-top:auto;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
 	}
 	.pages-mobile .menu{
 		display: inline-block;

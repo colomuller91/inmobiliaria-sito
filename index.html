@@ -53,24 +53,27 @@ Released   : 20140322
 		<img src="./images/logo2.png" alt="logo">
 	</div>
 	<div class="nav-movile" style="display: none;">
-	<div class="show-button" id="show-button">
-		<span class="icon icon-reorder"></span>
-	</div>
-	<div class="block-layer">
-	<div class="pages pages-mobile" id="nav-mobile" >
-		<div class="menu"><h2>MENU</h2></div>
-		<span class="icon icon-remove" id="close-button"></span>
-		<hr>
-		<ul>
-			<li><a data-scroll href="#"><div>Inicio</div></a></li>
-			<li><a href=""><div>Propiedades</div></a></li>
-			<li><a href=""><div>Alquileres</div></a></li>
-			<li><a data-scroll href="#welcome"><div>Nosotros</div></a></li>
-			<li><a href=""><div>Servicios y gestión</div></a></li>
-			<li><a data-scroll href="#contacto"><div>Contacto</div></a></li>
-		</ul>
-	</div>
-	</div>
+		<div class="show-button" id="show-button">
+			<span class="icon icon-reorder"></span>
+		</div>
+		<div class="show-button-2" id="show-button-2">
+			<span class="icon icon-reorder"></span>
+		</div>
+		<div class="block-layer">
+			<div class="pages pages-mobile" id="nav-mobile" >
+				<div class="menu"><h2>MENU</h2></div>
+				<span class="icon icon-remove" id="close-button"></span>
+				<hr>
+				<ul>
+					<li><a data-scroll href="#"><div>Inicio</div></a></li>
+					<li><a href=""><div>Propiedades</div></a></li>
+					<li><a href=""><div>Alquileres</div></a></li>
+					<li><a data-scroll href="#welcome"><div>Nosotros</div></a></li>
+					<li><a href=""><div>Servicios y gestión</div></a></li>
+					<li><a data-scroll href="#contacto"><div>Contacto</div></a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	<div class="pages" id="nav-desktop" style="display: none;">
 		<a href="">Inicio</a>
@@ -319,6 +322,9 @@ var options = {
 	$("#show-button").click(function(){
 		openMenu();
 	});
+	$("#show-button-2").click(function(){
+		openMenu();
+	});
 	$("#close-button").click(function(){
 		closeMenu()
 	});
@@ -352,6 +358,14 @@ var options = {
 			$(".slick").slick("slickSetOption","slidesToShow",3);
 		}else{
 			$(".slick").slick("slickSetOption","slidesToShow",1);
+		}
+	});
+
+	$(document).on("scroll", function() {
+		if($(document).scrollTop()>150) {
+			$(".show-button-2").addClass("visible");
+		} else {
+			$(".show-button-2").removeClass("visible");
 		}
 	});
 });
