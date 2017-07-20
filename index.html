@@ -234,7 +234,7 @@ Released   : 20140322
 </div>
 <div id="copyright">
 	<p><strong>&copy;</strong> <a href="#" data-scroll><strong>Inmobiliariasito.com</strong></a> <strong>2017</strong> | Todos los derechos reservados. | Design by <a href="https://www.facebook.com/colorau.muller" rel="nofollow"><strong>Colo Müller</strong></a>.</p>
-	<p><a data-scroll href="#">Inicio</a> | <a href="">Propiedades</a> | <a href="">Alquileres</a> | <a data-scroll href="#welcome">Nosotros</a> | <a href="">Servicios y gestión</a> | <a data-scroll href="#contacto">Contacto</a></p>
+	<p><strong><a data-scroll href="#">Inicio</a> | <a href="">Propiedades</a> | <a href="">Alquileres</a> | <a data-scroll href="#welcome">Nosotros</a> | <a href="">Servicios y gestión</a> | <a data-scroll href="#contacto">Contacto</a></strong></p>
 	<ul class="contact">
 		<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
 		<li><a href="#" class="icon icon-facebook"><span></span></a></li>
@@ -305,12 +305,14 @@ var options = {
 		navmobile.show();
 		navmobile.addClass("open");
 		$(".supercontainer").addClass("modal-open");
+		$("body").addClass("modal-open");
 		$(".block-layer").addClass("open");
 	};
 
 	function closeMenu(){
 		$("#nav-mobile").removeClass("open");
 		$(".supercontainer").removeClass("modal-open");
+		$("body").removeClass("modal-open");
 		$(".block-layer").removeClass("open");
 	}
 
