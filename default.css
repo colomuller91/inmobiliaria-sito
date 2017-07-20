@@ -67,13 +67,7 @@
 	height: 500px;
 	overflow: hidden;
 }
-@media (max-width: 990px)
-{
-	.slider
-	{
-		height: 350px;
-	}
-} 
+
 
 
 .slide{
@@ -104,6 +98,17 @@
 #second{
 	background-image: url(./images/banner.jpg);
 }
+
+@media (max-width: 990px)
+{
+	.slider
+	{
+		height: 280px;
+	}
+	.slidecontent{
+		padding-top: 5em;
+	}
+} 
 /*********************************************************************************/
 /* Form Style                                                                    */
 /**********************************
